@@ -62,7 +62,11 @@ public class StreamExp {
         // or
         System.out.println( numbersList.stream().reduce(0, (a,b) -> a + b) );
 
-        Collection<String> stringList = Arrays.asList( "DockingStation", "Screen", "KeyBoard", "Mouse", "Chair", "Table", "Plant");
+
+        /**
+         * to find element in collection with the specific charset
+         */
+        List<String> stringList = Arrays.asList( "DockingStation", "Screen", "KeyBoard", "Mouse", "Chair", "Table", "Plant");
 
         System.out.println(stringList);
 
@@ -84,13 +88,6 @@ public class StreamExp {
                 .collect( Collectors.toList());
         System.out.println(filteredList);
 
-
-        //Stream mapStream = m.stream();
-
-
-
-
-
         /*long count = Stream.of(1,2,3,4,5)
                 .peek(System.out::println)  // not working in Java after 8... We need to avoid use stream for "side effect" like println here
                 .count();*/
@@ -99,8 +96,5 @@ public class StreamExp {
                 .mapToObj(BigInteger::valueOf)
                 .reduce(BigInteger.ONE, BigInteger::multiply)
         );
-
-
-
     }
 }
